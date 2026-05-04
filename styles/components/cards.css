@@ -1,0 +1,9 @@
+.card {
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  transition: border-color var(--dur-2) ease, transform var(--dur-3) var(--ease-out-expo);
+}
+
+.card:hover { border-color: var(--c-line-strong); }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2630" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="#07090b"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <text x="400" y="240" font-family="ui-monospace, monospace" font-size="22" font-weight="600" fill="#5b6573" text-anchor="middle">// project_screenshot</text>
+  <text x="400" y="276" font-family="ui-monospace, monospace" font-size="14" fill="#3a4350" text-anchor="middle">awaiting upload</text>
+</svg>

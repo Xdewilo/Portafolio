@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Jeremy Posada</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body { display: grid; place-items: center; min-height: 100vh; padding: var(--sp-6); }
+    .nf {
+      text-align: center;
+      font-family: var(--ff-mono);
+      max-width: 56ch;
+      position: relative;
+      z-index: 2;
+    }
+    .nf__code {
+      font-family: var(--ff-display);
+      font-size: clamp(5rem, 18vw, 12rem);
+      font-weight: 800;
+      color: var(--c-accent);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .nf__msg { color: var(--c-fg-muted); font-size: var(--fs-md); margin: var(--sp-4) 0 var(--sp-6); }
+    .nf__msg::before { content: '$ '; color: var(--c-accent); }
+    .nf .btn { display: inline-flex; }
+  </style>
+</head>
+<body>
+  <div class="nf">
+    <h1 class="nf__code">404</h1>
+    <p class="nf__msg">cat: this page does not exist</p>
+    <a class="btn btn--primary" href="./">cd ~/portfolio</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+  <linearGradient id="pbi" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ebbb14"/>
+    <stop offset="1" stop-color="#dca321"/>
+  </linearGradient>
+  <path fill="url(#pbi)" d="M28 4v24h-6V4zm-9 4v20h-6V8zm-9 4v16H4V12z"/>
+</svg>

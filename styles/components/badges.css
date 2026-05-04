@@ -1,0 +1,49 @@
+.badge,
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  padding: var(--sp-1) var(--sp-3);
+  border: 1px solid var(--c-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--c-bg-elev-1);
+  color: var(--c-fg-muted);
+  letter-spacing: var(--tracking-mono);
+  white-space: nowrap;
+  transition: border-color var(--dur-2) ease, color var(--dur-2) ease, background var(--dur-2) ease;
+}
+
+.badge:hover,
+.chip:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+}
+
+.chip--spring  { color: var(--c-spring);  border-color: rgba(109, 179, 63, 0.4); }
+.chip--angular { color: var(--c-angular); border-color: rgba(221, 0, 49, 0.4); }
+.chip--java    { color: var(--c-java);    border-color: rgba(248, 152, 32, 0.4); }
+
+.chip--spring::before,
+.chip--angular::before,
+.chip--java::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 var(--c-accent-soft);
+  animation: pulse-green 1.6s var(--ease-out-quart) infinite;
+}
