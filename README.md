@@ -1,53 +1,50 @@
-# Jeremy Posada — Portfolio
+# 🚀 Portafolio – Xdewilo
 
-Backend Engineer / Microservices Architect — Barranquilla, CO.
+Portafolio personal desarrollado con **HTML5**, **CSS3** y **JavaScript** puro — sin frameworks ni dependencias de build. Diseño moderno y completamente responsivo.
 
-Live: https://xdewilo.github.io/Portafolio/
+## ✨ Características
 
-## Stack
+- **Hero animado** con ventana de código (code-window) y texto con efecto máquina de escribir.
+- **Sección Sobre mí** con badges de estadísticas.
+- **Habilidades** con barras de progreso animadas al hacer scroll.
+- **Proyectos** con tarjetas y overlay interactivo.
+- **Formulario de contacto** con validación en el cliente.
+- Navegación sticky, menú hamburguesa en móvil y botón "Volver arriba".
+- Scroll suave y resaltado automático del enlace activo.
+- Totalmente responsivo (mobile-first).
 
-Pure HTML / CSS / JS. No build step. No npm. Single `index.html`, modular CSS via `@import`, ES modules for JS.
-
-## Local dev
-
-```bash
-# Python (preferred)
-py -m http.server 5173
-# then open http://localhost:5173/
-```
-
-Or VS Code "Live Server" extension. Opening `index.html` via `file://` works for most things but ES modules can be blocked.
-
-## Deploy
-
-Pushes to `main` trigger `.github/workflows/deploy.yml` which uploads the entire repo as a Pages artifact. No build.
-
-GitHub repo settings required (one-time):
-
-1. Settings → Pages → Source: **GitHub Actions**
-2. Settings → Actions → General → Workflow permissions: **Read and write**
-
-## Structure
+## 📁 Estructura
 
 ```
-index.html, 404.html
-assets/  cv, img, svg
-styles/  tokens, base, layout, animations, utilities, main + components/ + sections/
-scripts/ main, i18n, animations, terminal, cursor, nav, favicon, form
-.github/workflows/deploy.yml
+Portafolio/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── README.md
 ```
 
-## Languages
+## 🛠 Tecnologías
 
-ES default. EN toggle in header. Strings live in `scripts/i18n-strings.js`. Persisted to `localStorage`.
+| Tecnología | Uso |
+|---|---|
+| HTML5 | Estructura semántica |
+| CSS3 (custom properties, grid, flexbox, keyframes) | Estilos y animaciones |
+| JavaScript (ES6+ vanilla) | Interactividad y efectos |
+| Inline SVG | Iconografía (sin dependencias externas) |
+| Google Fonts – Inter & Fira Code | Tipografía |
 
-## Contact form
+## 🌐 Uso
 
-Currently uses Formspree placeholder endpoint. To activate:
+Abre `index.html` directamente en tu navegador (no requiere servidor) o despliégalo en cualquier servicio de hosting estático como **GitHub Pages**, Netlify o Vercel.
 
-- Sign up at https://formspree.io, create a form, paste endpoint into `<form action>` in `index.html`.
-- Or flip `USE_MAILTO = true` in `scripts/form.js` to fall back to a `mailto:` link.
+### GitHub Pages
 
-## Credits
+1. Ve a **Settings → Pages**.
+2. Elige la rama y la carpeta raíz (`/`).
+3. Tu portafolio estará disponible en `https://Xdewilo.github.io/Portafolio/`.
 
-Built from scratch. No frameworks. No bundlers.
+## ✏️ Personalización
+
+Edita `index.html` para actualizar tu nombre, descripción, redes sociales, proyectos y datos de contacto. Los colores y tipografías se controlan con variables CSS en `:root` dentro de `css/style.css`.
