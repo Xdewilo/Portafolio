@@ -1,0 +1,109 @@
+.git-log {
+  position: relative;
+  margin-left: var(--sp-4);
+  padding-left: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+}
+
+.git-log::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 0;
+  width: 1px;
+  background: linear-gradient(
+    var(--c-line) 0%,
+    var(--c-line) var(--rail-progress, 0%),
+    transparent var(--rail-progress, 0%),
+    transparent 100%
+  );
+  background: var(--c-line);
+}
+
+.commit {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--dur-4) var(--ease-out-expo),
+              transform var(--dur-4) var(--ease-out-expo);
+}
+
+.commit.is-in { opacity: 1; transform: translateY(0); }
+
+.commit::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--sp-6) * -1 - 5px);
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--c-bg);
+  border: 2px solid var(--c-accent);
+  box-shadow: 0 0 0 0 var(--c-accent-soft);
+}
+
+.commit.is-in::before {
+  animation: pulse-green 600ms var(--ease-out-quart);
+}
+
+.commit__hash {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-syn-number);
+  margin-right: var(--sp-2);
+}
+
+.commit__refs {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-syn-comment);
+  font-style: italic;
+}
+
+.commit__refs strong {
+  color: var(--c-accent);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.commit__title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  margin-top: var(--sp-2);
+  margin-bottom: var(--sp-1);
+  color: var(--c-fg);
+}
+
+.commit__date {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-fg-subtle);
+  margin-bottom: var(--sp-3);
+}
+
+.commit__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  font-family: var(--ff-system);
+  font-size: var(--fs-sm);
+  color: var(--c-fg-muted);
+  line-height: var(--lh-base);
+  padding-left: var(--sp-4);
+  border-left: 1px solid var(--c-line);
+}
+
+.commit__body li::before {
+  content: '+ ';
+  color: var(--c-accent);
+  font-family: var(--ff-mono);
+  font-weight: 700;
+  margin-left: -1.2em;
+  margin-right: 0.3em;
+}

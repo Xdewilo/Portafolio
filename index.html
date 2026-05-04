@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d10">
+  <title>Jeremy Posada — Backend Engineer · Microservices Architect</title>
+  <meta name="description" content="Jeremy Posada — Backend developer en Java + Spring Boot. Microservicios, arquitectura hexagonal, DDD/CQRS. Barranquilla, Colombia.">
+  <meta name="author" content="Jeremy Posada">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jeremy Posada — Backend Engineer">
+  <meta property="og:description" content="Backend developer en Java + Spring Boot. Microservicios, hexagonal, DDD/CQRS.">
+  <meta property="og:image" content="assets/img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicons/favicon.svg" id="favicon-link">
+  <link rel="apple-touch-icon" href="assets/img/favicons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<div class="ide-cursor" aria-hidden="true"></div>
+<div class="ide-cursor__dot" aria-hidden="true"></div>
+
+<aside class="ln-rail" aria-hidden="true">
+  <ol id="ln-rail-numbers"></ol>
+</aside>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <div class="site-header__brand">
+      <nav class="breadcrumbs" id="breadcrumbs" aria-label="Path">
+        <span class="breadcrumbs__crumb">~</span>
+        <span class="breadcrumbs__sep">/</span>
+        <span class="breadcrumbs__crumb">portfolio</span>
+        <span class="breadcrumbs__sep">/</span>
+        <span class="breadcrumbs__crumb breadcrumbs__crumb--active" id="breadcrumb-active">index.html</span>
+      </nav>
+    </div>
+
+    <nav class="site-header__nav" id="primary-nav" aria-label="Primary">
+      <a href="#hero"        data-i18n="nav.home">inicio</a>
+      <a href="#about"       data-i18n="nav.about">sobre_mí</a>
+      <a href="#stack"       data-i18n="nav.skills">skills</a>
+      <a href="#experience"  data-i18n="nav.experience">experiencia</a>
+      <a href="#projects"    data-i18n="nav.projects">proyectos</a>
+      <a href="#contact"     data-i18n="nav.contact">contacto</a>
+    </nav>
+
+    <div class="site-header__right">
+      <span class="site-header__available">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span data-i18n="header.available">disponible</span>
+      </span>
+
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-toggle__pill" aria-hidden="true"></span>
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero__inner">
+
+        <div class="hero__terminal" id="hero-terminal">
+          <header class="terminal__chrome">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">jeremy@barranquilla:~</span>
+          </header>
+          <pre class="terminal__body" id="boot-sequence" aria-hidden="true"></pre>
+        </div>
+
+        <div class="hero__content">
+          <h1 class="hero__name">
+            <span class="hero__name-line"          data-text-i18n="hero.firstName" data-stagger>JEREMY</span>
+            <span class="hero__name-line hero__name-line--accent" data-text-i18n="hero.lastName" data-stagger>POSADA</span>
+          </h1>
+          <p class="hero__role" data-i18n="hero.role">Backend Engineer · Arquitecto de Microservicios</p>
+          <p class="hero__lead" data-i18n="hero.lead">Construyo backends robustos en Java + Spring Boot con arquitectura hexagonal, DDD y CQRS. Frontends en Angular cuando hace falta.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#projects" data-i18n="hero.ctaProjects">view_projects()</a>
+            <a class="btn btn--ghost" href="assets/cv/CV-Jeremy-Posada.pdf" download data-i18n="hero.ctaCV">download_cv.pdf</a>
+          </div>
+          <div class="hero__meta">
+            <span data-i18n="hero.location">Barranquilla, Colombia</span>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">abierto a oportunidades</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <p class="section-tag">// 01_about</p>
+      <h2 class="section-title">
+        <span class="prompt">$</span>
+        <span data-i18n="about.title">cat about_me.md</span>
+      </h2>
+
+      <div class="about__grid">
+        <figure class="about__photo">
+          <img src="assets/img/profile.webp" alt="Jeremy Posada" loading="lazy" decoding="async" width="360" height="450" onerror="this.src='assets/img/projects/placeholder.svg'; this.style.aspectRatio='4/5';">
+          <figcaption data-i18n="about.caption">// jeremy.posada — Barranquilla, CO</figcaption>
+        </figure>
+
+        <div class="about__copy">
+          <p data-i18n="about.p1">Desarrollador backend orientado a resultados. Microservicios en Java + Spring Boot, arquitectura hexagonal, DDD/CQRS. Próximo a graduarme de Ingeniería de Sistemas.</p>
+          <p data-i18n="about.p2">Me enfoco en código claro, testeable y estable en producción. Comunico avances con precisión y cuido los detalles. Quiero aportar en equipos donde la calidad técnica y la entrega constante marquen la diferencia.</p>
+
+          <ul class="about__facts">
+            <li><span class="key">name</span><span class="val">Jeremy Posada</span></li>
+            <li><span class="key">location</span><span class="val">Barranquilla, CO</span></li>
+            <li><span class="key">degree</span><span class="val" data-i18n="about.degree">Ingeniería de Sistemas — pendiente título</span></li>
+            <li><span class="key">focus</span><span class="val" data-i18n="about.focus">microservices, DDD, clean arch.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Java + Spring cinematic -->
+  <section id="java-spring" class="cinematic cinematic--spring" data-trigger="cinematic" data-once="true" aria-labelledby="spring-title">
+    <div class="cinematic__glow" aria-hidden="true"></div>
+    <div class="cinematic__inner">
+
+      <div class="cinematic__content">
+        <p class="section-tag">// 02_skills</p>
+        <h2 id="spring-title" class="cinematic__title">
+          <span class="prompt">$</span>
+          <span>spring_boot --version</span>
+        </h2>
+        <p class="cinematic__lead" data-i18n="spring.lead">Mi stack principal. Microservicios con Spring Boot, autenticación JWT, JPA/Hibernate y migraciones controladas con Flyway. Hexagonal + DDD/CQRS para que la lógica de negocio quede clara y testeable.</p>
+
+        <div class="cinematic__chips">
+          <span class="chip chip--spring">Spring Boot</span>
+          <span class="chip chip--spring">Spring Security</span>
+          <span class="chip chip--spring">Spring Data JPA</span>
+          <span class="chip chip--java">Java 17+</span>
+          <span class="chip chip--java">Hibernate</span>
+          <span class="chip chip--java">Flyway</span>
+          <span class="chip">JWT</span>
+          <span class="chip">Maven</span>
+          <span class="chip">JUnit</span>
+          <span class="chip">Mockito</span>
+          <span class="chip">RabbitMQ</span>
+          <span class="chip">Kafka</span>
+        </div>
+
+        <pre class="code-block" data-lang="java" aria-hidden="true"><code><span class="syn-com">// hexagonal · domain-driven · cqrs</span>
+<span class="syn-kw">@RestController</span>
+<span class="syn-kw">@RequestMapping</span>(<span class="syn-str">"/api/users"</span>)
+<span class="syn-kw">public class</span> <span class="syn-ty">UserController</span> {
+  <span class="syn-kw">private final</span> <span class="syn-ty">UserCommandHandler</span> handler;
+
+  <span class="syn-kw">@PostMapping</span>
+  <span class="syn-ty">UserDto</span> <span class="syn-fn">create</span>(<span class="syn-kw">@Valid</span> <span class="syn-ty">CreateUserCmd</span> cmd) {
+    <span class="syn-kw">return</span> handler.<span class="syn-fn">handle</span>(cmd);
+  }
+}</code></pre>
+      </div>
+
+      <div class="cinematic__logo" aria-hidden="true">
+        <svg viewBox="0 0 767.8 768" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#6db33f" d="M698.3 40c-10.8 25.8-24.5 50.3-41 72.8C585.1 40.6 487.1 0 385 0 173.8 0 0 174 0 385.5 0 491 43.2 592 119.6 664.8l14.2 12.6c69.4 58.5 157.3 90.7 248 90.7 200.8 0 369.6-157.4 383.9-358 10.5-98.2-18.3-222.4-67.4-370.1zm-524 627c-6.2 7.7-15.7 12.2-25.6 12.2-18.1 0-32.9-14.9-32.9-33s14.9-33 32.9-33c7.5 0 14.9 2.6 20.7 7.4 14.1 11.4 16.3 32.3 4.9 46.4zm522.4-115.4c-95 126.7-297.9 84-428 90.1 0 0-23.1 1.4-46.3 5.2 0 0 8.7-3.7 20-8 91.3-31.8 134.5-38 190-66.5 104.5-53.2 207.8-169.6 229.3-290.7C621.9 398.2 501.3 498.3 391.4 539c-75.3 27.8-211.3 54.8-211.3 54.8l-5.5-2.9C82 545.8 79.2 345.1 247.5 280.3c73.7-28.4 144.2-12.8 223.8-31.8 85-20.2 183.3-84 223.3-167.2 44.8 133.1 98.7 341.5 2.1 470.3z"/>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Angular cinematic -->
+  <section id="angular" class="cinematic cinematic--angular" data-trigger="cinematic" data-once="true" aria-labelledby="angular-title">
+    <div class="cinematic__glow" aria-hidden="true"></div>
+    <div class="cinematic__inner">
+
+      <div class="cinematic__content">
+        <p class="section-tag">// 03_skills</p>
+        <h2 id="angular-title" class="cinematic__title">
+          <span class="prompt">$</span>
+          <span>ng serve --frontend</span>
+        </h2>
+        <p class="cinematic__lead" data-i18n="angular.lead">Para el frontend: Angular + TypeScript con vertical slicing por dominio, RxJS para flujos reactivos, Reactive Forms con validación robusta. Frontends que escalan junto al backend.</p>
+
+        <div class="cinematic__chips">
+          <span class="chip chip--angular">Angular 17+</span>
+          <span class="chip chip--angular">TypeScript</span>
+          <span class="chip chip--angular">RxJS</span>
+          <span class="chip chip--angular">Reactive Forms</span>
+          <span class="chip">NgRx</span>
+          <span class="chip">SCSS</span>
+          <span class="chip">Tailwind</span>
+          <span class="chip">Vertical Slicing</span>
+          <span class="chip">PWA</span>
+          <span class="chip">Vite</span>
+        </div>
+
+        <pre class="code-block" data-lang="ts" aria-hidden="true"><code><span class="syn-com">// vertical slicing · reactive forms</span>
+<span class="syn-kw">@Component</span>({ selector: <span class="syn-str">'app-users'</span> })
+<span class="syn-kw">export class</span> <span class="syn-ty">UsersComponent</span> {
+  users$ = <span class="syn-kw">this</span>.api.<span class="syn-fn">list</span>().<span class="syn-fn">pipe</span>(
+    <span class="syn-fn">map</span>(u =&gt; u.<span class="syn-fn">filter</span>(x =&gt; x.active)),
+    <span class="syn-fn">shareReplay</span>(<span class="syn-num">1</span>),
+  );
+}</code></pre>
+      </div>
+
+      <div class="cinematic__logo" aria-hidden="true">
+        <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#DD0031" d="M125 30L31.9 63.2l14.2 123.1L125 230l78.9-43.7 14.2-123.1z"/>
+          <path fill="#C3002F" d="M125 30v22.2-.1V230l78.9-43.7 14.2-123.1L125 30z"/>
+          <path fill="#FFFFFF" d="M125 52.1L66.8 182.6h21.7l11.7-29.2h49.4l11.7 29.2H183L125 52.1zm17 83.3h-34l17-40.9 17 40.9z"/>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stack grid -->
+  <section id="stack">
+    <div class="container">
+      <p class="section-tag">// 04_stack</p>
+      <h2 class="section-title">
+        <span class="prompt">$</span>
+        <span data-i18n="stack.title">ls --all ./skills</span>
+      </h2>
+      <p class="stack__intro" data-i18n="stack.intro">El stack completo. Backend, frontend, datos, infra, herramientas.</p>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item"><img src="assets/svg/logo-java.svg"       alt="">Java</span>
+        <span class="marquee__item"><img src="assets/svg/logo-spring.svg"     alt="">Spring Boot</span>
+        <span class="marquee__item"><img src="assets/svg/logo-angular.svg"    alt="">Angular</span>
+        <span class="marquee__item"><img src="assets/svg/logo-typescript.svg" alt="">TypeScript</span>
+        <span class="marquee__item"><img src="assets/svg/logo-node.svg"       alt="">Node.js</span>
+        <span class="marquee__item"><img src="assets/svg/logo-nestjs.svg"     alt="">NestJS</span>
+        <span class="marquee__item"><img src="assets/svg/logo-go.svg"         alt="">Go</span>
+        <span class="marquee__item"><img src="assets/svg/logo-dotnet.svg"     alt="">.NET</span>
+        <span class="marquee__item"><img src="assets/svg/logo-postgres.svg"   alt="">PostgreSQL</span>
+        <span class="marquee__item"><img src="assets/svg/logo-mysql.svg"      alt="">MySQL</span>
+        <span class="marquee__item"><img src="assets/svg/logo-mongo.svg"      alt="">MongoDB</span>
+        <span class="marquee__item"><img src="assets/svg/logo-docker.svg"     alt="">Docker</span>
+        <span class="marquee__item"><img src="assets/svg/logo-git.svg"        alt="">Git</span>
+        <span class="marquee__item"><img src="assets/svg/logo-powerbi.svg"    alt="">Power BI</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee__item"><img src="assets/svg/logo-java.svg"       alt="">Java</span>
+        <span class="marquee__item"><img src="assets/svg/logo-spring.svg"     alt="">Spring Boot</span>
+        <span class="marquee__item"><img src="assets/svg/logo-angular.svg"    alt="">Angular</span>
+        <span class="marquee__item"><img src="assets/svg/logo-typescript.svg" alt="">TypeScript</span>
+        <span class="marquee__item"><img src="assets/svg/logo-node.svg"       alt="">Node.js</span>
+        <span class="marquee__item"><img src="assets/svg/logo-nestjs.svg"     alt="">NestJS</span>
+        <span class="marquee__item"><img src="assets/svg/logo-go.svg"         alt="">Go</span>
+        <span class="marquee__item"><img src="assets/svg/logo-dotnet.svg"     alt="">.NET</span>
+        <span class="marquee__item"><img src="assets/svg/logo-postgres.svg"   alt="">PostgreSQL</span>
+        <span class="marquee__item"><img src="assets/svg/logo-mysql.svg"      alt="">MySQL</span>
+        <span class="marquee__item"><img src="assets/svg/logo-mongo.svg"      alt="">MongoDB</span>
+        <span class="marquee__item"><img src="assets/svg/logo-docker.svg"     alt="">Docker</span>
+        <span class="marquee__item"><img src="assets/svg/logo-git.svg"        alt="">Git</span>
+        <span class="marquee__item"><img src="assets/svg/logo-powerbi.svg"    alt="">Power BI</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul class="stack__grid">
+        <li class="stack__cell"><img src="assets/svg/logo-java.svg" alt=""><span>Java</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-spring.svg" alt=""><span>Spring Boot</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-angular.svg" alt=""><span>Angular</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-typescript.svg" alt=""><span>TypeScript</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-node.svg" alt=""><span>Node.js</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-nestjs.svg" alt=""><span>NestJS</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-go.svg" alt=""><span>Go</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-dotnet.svg" alt=""><span>C# / .NET</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-postgres.svg" alt=""><span>PostgreSQL</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-mysql.svg" alt=""><span>MySQL</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-mongo.svg" alt=""><span>MongoDB</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-docker.svg" alt=""><span>Docker</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-git.svg" alt=""><span>Git</span></li>
+        <li class="stack__cell"><img src="assets/svg/logo-powerbi.svg" alt=""><span>Power BI</span></li>
+        <li class="stack__cell"><span>Hexagonal</span></li>
+        <li class="stack__cell"><span>DDD / CQRS</span></li>
+        <li class="stack__cell"><span>JWT</span></li>
+        <li class="stack__cell"><span>RabbitMQ</span></li>
+        <li class="stack__cell"><span>Kafka</span></li>
+        <li class="stack__cell"><span>REST APIs</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-tag">// 05_experience</p>
+      <h2 class="section-title">
+        <span class="prompt">$</span>
+        <span data-i18n="experience.title">git log --author=jeremy</span>
+      </h2>
+
+      <ol class="git-log">
+        <li class="commit" data-anim="commit">
+          <div>
+            <span class="commit__hash">a4f1c20</span>
+            <span class="commit__refs">(HEAD -&gt; <strong>eidykos</strong>, origin/main)</span>
+          </div>
+          <h3 class="commit__title" data-i18n="exp.eidykos.role">Backend Engineer @ EIDYKOS S.A.S</h3>
+          <p class="commit__date">2024 — <span data-i18n="exp.present">presente</span></p>
+          <ul class="commit__body">
+            <li data-i18n="exp.eidykos.b1">Migración del monolito a arquitectura hexagonal — mejor mantenibilidad y desacoplamiento.</li>
+            <li data-i18n="exp.eidykos.b2">Casos de uso con DDD/CQRS — comandos y queries separados, lógica de negocio testeable.</li>
+            <li data-i18n="exp.eidykos.b3">APIs REST con JWT, JPA/Hibernate, migraciones con Flyway en PostgreSQL.</li>
+            <li data-i18n="exp.eidykos.b4">Frontend Angular + TypeScript con vertical slicing por dominios.</li>
+          </ul>
+        </li>
+
+        <li class="commit" data-anim="commit">
+          <div>
+            <span class="commit__hash">9e2b5d1</span>
+            <span class="commit__refs">(<strong>tic-ltda</strong>)</span>
+          </div>
+          <h3 class="commit__title" data-i18n="exp.tic.role">Junior Full Stack Developer @ TIC LTDA</h3>
+          <p class="commit__date">2023 — 2024</p>
+          <ul class="commit__body">
+            <li data-i18n="exp.tic.b1">Migración de aplicaciones PHP → Laravel — mejora de escalabilidad y organización.</li>
+            <li data-i18n="exp.tic.b2">Módulo de generación de códigos de barras y guías de envío para Triple AAA y Efigas.</li>
+            <li data-i18n="exp.tic.b3">Consumo de APIs externas para visualización de datos en tiempo real.</li>
+          </ul>
+        </li>
+
+        <li class="commit" data-anim="commit">
+          <div>
+            <span class="commit__hash">init001</span>
+            <span class="commit__refs">(<strong>education</strong>)</span>
+          </div>
+          <h3 class="commit__title" data-i18n="exp.edu.role">Ingeniería de Sistemas · Diplomado C# .NET</h3>
+          <p class="commit__date">Institución Universitaria Americana</p>
+          <ul class="commit__body">
+            <li data-i18n="exp.edu.b1">Próximo a graduarme. Diplomado complementario en C# / .NET.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-tag">// 06_projects</p>
+      <h2 class="section-title">
+        <span class="prompt">$</span>
+        <span data-i18n="projects.title">ls ./projects</span>
+      </h2>
+
+      <div class="projects__grid">
+
+        <article class="project project--featured" data-anim="card">
+          <a class="project__link" href="https://e-brisk.com" target="_blank" rel="noopener" data-cursor>
+            <figure class="project__media" data-meta="// featured · live">
+              <img src="assets/img/projects/e-brisk.webp" alt="e-brisk preview" loading="lazy" width="800" height="500" onerror="this.src='assets/img/projects/placeholder.svg';">
+            </figure>
+            <div class="project__body">
+              <p class="project__meta">PWA · TypeScript · Angular</p>
+              <h3 class="project__title">e-brisk</h3>
+              <p class="project__desc" data-i18n="projects.ebrisk.desc">PWA en producción. Mi segundo proyecto, enfocado en velocidad y experiencia móvil. Visita el sitio en vivo.</p>
+              <ul class="project__stack">
+                <li>Angular</li><li>TypeScript</li><li>PWA</li><li>Service Worker</li>
+              </ul>
+              <span class="project__cta" data-i18n="projects.cta.visit">visit_site() →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project" data-anim="card">
+          <a class="project__link" href="https://github.com/Xdewilo/Angular-Spring" target="_blank" rel="noopener" data-cursor>
+            <figure class="project__media" data-meta="// fullstack">
+              <img src="assets/img/projects/angular-spring.webp" alt="Angular-Spring preview" loading="lazy" width="800" height="500" onerror="this.src='assets/img/projects/placeholder.svg';">
+            </figure>
+            <div class="project__body">
+              <p class="project__meta">Full-stack · Java · Angular</p>
+              <h3 class="project__title">Angular-Spring</h3>
+              <p class="project__desc" data-i18n="projects.angularSpring.desc">Aplicación full-stack: backend Spring Boot + frontend Angular. Docker, Firebase, autenticación JWT.</p>
+              <ul class="project__stack">
+                <li>Spring Boot</li><li>Angular</li><li>Docker</li><li>JWT</li>
+              </ul>
+              <span class="project__cta" data-i18n="projects.cta.code">view_code() →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project" data-anim="card">
+          <a class="project__link" href="https://github.com/Xdewilo" target="_blank" rel="noopener" data-cursor>
+            <figure class="project__media" data-meta="// backend">
+              <img src="assets/img/projects/placeholder.svg" alt="" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <p class="project__meta">Microservices · Java</p>
+              <h3 class="project__title" data-i18n="projects.slot1.title">Microservices Lab</h3>
+              <p class="project__desc" data-i18n="projects.slot1.desc">Set de microservicios Spring Boot con arquitectura hexagonal, DDD/CQRS, comunicación vía Kafka.</p>
+              <ul class="project__stack">
+                <li>Spring Boot</li><li>Kafka</li><li>Hexagonal</li>
+              </ul>
+              <span class="project__cta" data-i18n="projects.cta.code">view_code() →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project" data-anim="card">
+          <a class="project__link" href="https://github.com/Xdewilo" target="_blank" rel="noopener" data-cursor>
+            <figure class="project__media" data-meta="// api">
+              <img src="assets/img/projects/placeholder.svg" alt="" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <p class="project__meta">REST API · Node.js</p>
+              <h3 class="project__title" data-i18n="projects.slot2.title">REST API Toolkit</h3>
+              <p class="project__desc" data-i18n="projects.slot2.desc">APIs REST en Node.js / NestJS con autenticación, validación, OpenAPI. Patrones MVC y DDD.</p>
+              <ul class="project__stack">
+                <li>NestJS</li><li>MongoDB</li><li>OpenAPI</li>
+              </ul>
+              <span class="project__cta" data-i18n="projects.cta.code">view_code() →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project project--placeholder" data-anim="card">
+          <div class="project__body">
+            <p class="project__meta">// TODO</p>
+            <h3 class="project__title" data-i18n="projects.slot3.title">Próximamente</h3>
+            <p class="project__desc" data-i18n="projects.slot3.desc">Más proyectos en camino. Sígueme en GitHub.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-tag">// 07_contact</p>
+      <h2 class="section-title">
+        <span class="prompt">$</span>
+        <span data-i18n="contact.title">./say_hi.sh</span>
+      </h2>
+
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p data-i18n="contact.lead">Si quieres hablar de un proyecto, vacante o colaboración, escríbeme. Respondo rápido.</p>
+          <ul class="contact__channels">
+            <li><span class="key">email</span><a href="mailto:jeremyposada2003@gmail.com">jeremyposada2003@gmail.com</a></li>
+            <li><span class="key">github</span><a href="https://github.com/Xdewilo" target="_blank" rel="noopener">github.com/Xdewilo</a></li>
+            <li><span class="key">linkedin</span><a href="https://www.linkedin.com/in/jeremy-posada-56855820b" target="_blank" rel="noopener">/in/jeremy-posada</a></li>
+            <li><span class="key">phone</span><a href="tel:+573043620454">+57 304 362 0454</a></li>
+            <li><span class="key">location</span><span>Barranquilla, Colombia</span></li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contact-form" action="https://formspree.io/f/REPLACE_ME" method="POST" novalidate>
+          <label for="cf-name">
+            <span data-i18n="form.name">name</span>
+            <input id="cf-name" name="name" type="text" required autocomplete="name">
+          </label>
+          <label for="cf-email">
+            <span data-i18n="form.email">email</span>
+            <input id="cf-email" name="email" type="email" required autocomplete="email">
+          </label>
+          <label for="cf-msg">
+            <span data-i18n="form.message">message</span>
+            <textarea id="cf-msg" name="message" rows="5" required></textarea>
+          </label>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+          <button type="submit" class="btn btn--primary">
+            <span data-i18n="form.submit">send_message()</span>
+          </button>
+          <p class="form__status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span data-i18n="footer.built">// © 2026 Jeremy Posada — hecho a mano en HTML, CSS y JS</span>
+    <div class="site-footer__links">
+      <a href="https://github.com/Xdewilo" target="_blank" rel="noopener">github</a>
+      <a href="https://www.linkedin.com/in/jeremy-posada-56855820b" target="_blank" rel="noopener">linkedin</a>
+      <a href="mailto:jeremyposada2003@gmail.com">email</a>
+      <a href="#hero" data-i18n="footer.backToTop">subir ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="scripts/main.js"></script>
+
+</body>
+</html>

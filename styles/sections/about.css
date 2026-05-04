@@ -1,0 +1,99 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+@media (max-width: 880px) {
+  .about__grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+}
+
+.about__photo {
+  border: 1px solid var(--c-line);
+  background: var(--c-bg-elev-1);
+  padding: var(--sp-3);
+  border-radius: var(--radius-md);
+  transform: rotate(-1.5deg);
+  transition: transform var(--dur-3) var(--ease-out-expo), border-color var(--dur-3) ease;
+  position: relative;
+  max-width: 360px;
+}
+
+.about__photo:hover {
+  transform: rotate(0deg) scale(1.02);
+  border-color: var(--c-accent);
+}
+
+.about__photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  filter: grayscale(0.2) contrast(1.05);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  background: var(--c-bg-inset);
+}
+
+.about__photo figcaption {
+  margin-top: var(--sp-3);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-2xs);
+  color: var(--c-syn-comment);
+  font-style: italic;
+}
+
+.about__photo::before {
+  content: '// portrait';
+  position: absolute;
+  top: -22px;
+  left: 0;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-2xs);
+  color: var(--c-syn-comment);
+  letter-spacing: var(--tracking-wide);
+}
+
+.about__copy p {
+  font-family: var(--ff-system);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
+  color: var(--c-fg-muted);
+  margin-bottom: var(--sp-4);
+  max-width: 60ch;
+}
+
+.about__copy p:first-child {
+  font-family: var(--ff-display);
+  font-size: var(--fs-lg);
+  color: var(--c-fg);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.about__facts {
+  margin-top: var(--sp-5);
+  display: grid;
+  gap: var(--sp-2);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  background: var(--c-bg-inset);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.about__facts li {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.about__facts .key {
+  color: var(--c-syn-keyword);
+  min-width: 100px;
+}
+
+.about__facts .key::after { content: ':'; color: var(--c-syn-punct); }
+
+.about__facts .val { color: var(--c-fg); }
